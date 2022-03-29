@@ -112,14 +112,14 @@ class TagObserver
     {
         if (in_array($entity->identifier, config('wk-morph-tag.tags_protected')))
             return false;
-
-        if (!config('wk-morph-tag.soft_delete')) {
-            $entity->forceDelete();
-        }
     
         if ($entity->isForceDeleting()) {
             $entity->langs()->withTrashed()
                             ->forceDelete();
+        }
+
+        if (!config('wk-morph-tag.soft_delete')) {
+            $entity->forceDelete();
         }
     }
 
