@@ -76,7 +76,7 @@ class Tag extends Entity
      */
     public function sites()
     {
-        return $this->morphedByMany(config('wk-core.class.site.site'), 'morph', config('wk-core.table.morph-tag.tags_morphs'));
+        return $this->morphedByMany(config('wk-core.class.site-mall.site'), 'morph', config('wk-core.table.morph-tag.tags_morphs'));
     }
 
     /**
