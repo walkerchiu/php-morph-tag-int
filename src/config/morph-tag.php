@@ -32,6 +32,7 @@ return [
         'morph-category' => 0,
         'rule'           => 0,
         'rule-hit'       => 0,
+        'site-cms'       => 0,
         'site-mall'      => 0,
     ],
 
